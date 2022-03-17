@@ -22,14 +22,17 @@ const TodoList = () => {
     });
   };
 
-  /**checks if the task is completed
+  /**checks if the task is completed and applies approcite styling
    * calls functions to dispatch appropriate actions
    */
   const list = state.map((task) => {
     return (
       <ul className={styled.list} key={task.id}>
-        <section className={styled.listgroup}>
-          <li style={{ backgroundColor: task.completed && "lightgreen" }}>
+        <section
+          style={{ opacity: task.completed && "0.5" }}
+          className={styled.listgroup}
+        >
+          <li style={{ textDecoration: task.completed && "line-through" }}>
             {task.todo_item}
           </li>
 
