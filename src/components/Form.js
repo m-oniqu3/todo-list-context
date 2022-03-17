@@ -13,7 +13,10 @@ const Form = () => {
    */
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: ACTIONS.ADD_TODO, payload: { item, id: Date.now() } });
+    dispatch({
+      type: ACTIONS.ADD_TODO,
+      payload: { item, id: Date.now(), complete: false },
+    });
     setItem("");
   };
 
