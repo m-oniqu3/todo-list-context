@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import styled from "./TodoList.module.css";
 import { TodoContexts } from "../contexts/TodoContexts";
 import { ACTIONS } from "../reducers/todoReducer";
 
@@ -26,12 +27,21 @@ const TodoList = () => {
    */
   const list = state.map((task) => {
     return (
-      <ul key={task.id}>
-        <li style={{ backgroundColor: task.completed && "lightgreen" }}>
-          {task.todo_item}
-        </li>
-        <button onClick={() => handleDelete(task)}>Delete</button>
-        <button onClick={() => handleComplete(task)}>Complete</button>
+      <ul className={styled.list} key={task.id}>
+        <section className={styled.listgroup}>
+          <li style={{ backgroundColor: task.completed && "lightgreen" }}>
+            {task.todo_item}
+          </li>
+
+          <div className={styled.btnGroup}>
+            <div onClick={() => handleDelete(task)}>
+              <i class="fa-solid fa-lg fa-trash"></i>
+            </div>
+            <div onClick={() => handleComplete(task)}>
+              <i class="fa-solid fa-lg fa-square-check"></i>
+            </div>
+          </div>
+        </section>
       </ul>
     );
   });

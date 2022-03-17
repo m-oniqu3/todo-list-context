@@ -1,0 +1,10 @@
+.form {
+  margin: 1.5rem 0;
+}
+
+.field {
+  padding: 0.6rem 1rem;
+  border: none;
+  background-color: #dee4e7;
+  width: 100%;
+}

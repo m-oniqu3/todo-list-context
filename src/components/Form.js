@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import styled from "./Form.module.css";
 import { TodoContexts } from "../contexts/TodoContexts";
 import { ACTIONS } from "../reducers/todoReducer";
 
@@ -21,13 +22,13 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className={styled.form}>
       <input
+        className={styled.field}
         type="text"
         value={item}
         onChange={(e) => setItem(e.target.value)}
       />
-      <button type="submit">Submit</button>
     </form>
   );
 };

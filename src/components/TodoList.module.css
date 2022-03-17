@@ -1,0 +1,25 @@
+ul {
+  list-style: none;
+  /* display: flex;
+  justify-content: space-between; */
+}
+.listgroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  background-color: rgb(197, 197, 197);
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  word-break: break-all;
+
+  line-height: 1.5;
+
+  align-self: start;
+}
