@@ -1,3 +1,18 @@
+@media (min-width: 768px) {
+  .listContainer {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+}
+
+.listContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.listContainer {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 ul {
   list-style: none;
   /* display: flex;
@@ -6,20 +21,32 @@ ul {
 .listgroup {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 1.5rem;
   gap: 1rem;
-  background-color: rgb(197, 197, 197);
+  background-color: #cfddee;
+  /* border-bottom: 2px solid #71a2de; */
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+i {
+  color: #0b305c;
 }
 
 .btnGroup {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.btnGroup > :first-child {
+  padding-right: 0.5rem;
 }
 
 li {
-  word-break: break-all;
-
+  /* word-wrap: break-word; */
+  word-break: keep-all;
   line-height: 1.5;
-
   align-self: start;
 }

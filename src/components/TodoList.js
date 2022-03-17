@@ -38,14 +38,14 @@ const TodoList = () => {
               <i class="fa-solid fa-lg fa-trash"></i>
             </div>
             <div onClick={() => handleComplete(task)}>
-              <i class="fa-solid fa-lg fa-square-check"></i>
+              <i class="fa-solid fa-lg fa-circle-check"></i>
             </div>
           </div>
         </section>
       </ul>
     );
   });
-  return <div>{list}</div>;
+  return <div className={styled.listContainer}>{list}</div>;
 };
 
 export default TodoList;

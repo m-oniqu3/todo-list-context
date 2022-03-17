@@ -26,6 +26,7 @@ const Form = () => {
       <input
         className={styled.field}
         type="text"
+        placeholder="Add a task...."
         value={item}
         onChange={(e) => setItem(e.target.value)}
       />
