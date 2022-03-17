@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Header />
-      {/* Wrap components with the context provider so hey can have access to the state  */}
+      {/* Wrap components with the context provider so they can have access to the state  */}
       <TodoContextsProvider>
         <section className="container">
           <Form />

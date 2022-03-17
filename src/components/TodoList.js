@@ -7,12 +7,12 @@ const TodoList = () => {
   //destructure the state and the dispatch function from the context object
   const { state, dispatch } = useContext(TodoContexts);
 
-  // dispatch the DELETE_TODO action when the user clicks on the button
+  // dispatch the DELETE_TODO action with the current task id as payload
   const handleDelete = (task) => {
     dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: task.id } });
   };
 
-  // dispatch the COMPLETE_TODO action when the user clicks on the button
+  // dispatch the COMPLETE_TODO action with the current task id as payload
   const handleComplete = (task) => {
     dispatch({
       type: ACTIONS.COMPLETE_TODO,
@@ -23,6 +23,7 @@ const TodoList = () => {
   };
 
   /**checks if the task is completed and applies approcite styling
+   * styling - lowered opacity & line through
    * calls functions to dispatch appropriate actions
    */
   const list = state.map((task) => {

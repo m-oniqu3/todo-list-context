@@ -5,13 +5,11 @@ import todoReducer from "../reducers/todoReducer";
 export const TodoContexts = createContext();
 
 const TodoContextsProvider = ({ children }) => {
-  //called the reducer with the state
+  //called the reducer with the initial state
   const [state, dispatch] = useReducer(todoReducer, []);
-  console.log(state);
+
   return (
-    /**
-     * passed the state and the dispatch functions as values
-     *  */
+    //passed the state and the dispatch functions as values
     <TodoContexts.Provider value={{ state, dispatch }}>
       {children}
     </TodoContexts.Provider>

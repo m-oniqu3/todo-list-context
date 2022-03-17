@@ -13,11 +13,11 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
 ul {
   list-style: none;
-  /* display: flex;
-  justify-content: space-between; */
 }
+
 .listgroup {
   display: flex;
   justify-content: space-between;
@@ -25,7 +25,6 @@ ul {
   margin-bottom: 1.5rem;
   gap: 1rem;
   background-color: #cfddee;
-  /* border-bottom: 2px solid #71a2de; */
   padding: 0.5rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -33,6 +32,10 @@ ul {
 
 i {
   color: #0b305c;
+}
+
+i:hover {
+  color: #0073ff;
 }
 
 .btnGroup {
@@ -45,8 +48,6 @@ i {
 }
 
 li {
-  /* word-wrap: break-word; */
   word-break: keep-all;
   line-height: 1.5;
-  align-self: start;
 }
